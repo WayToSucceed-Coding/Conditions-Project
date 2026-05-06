@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: lavender;
+        font-family: Arial;
+        text-align: center;
+      }
+
+      h1 {
+        color: purple;
+      }
+
+      input {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      #result {
+        font-size: 28px;
+        color: darkblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Magic Word Page</h1>
+
+    <p>Type the magic word below:</p>
+
+    <input type="text" id="magicWord" placeholder="Enter magic word" />
+
+    <br />
+
+    <button onclick="checkWord()">Reveal</button>
+
+    <p id="result"></p>
+
+    <script>
+      function checkWord() {
+        var word = document.getElementById("magicWord").value;
+
+        if (word === "abracadabra") {
+          document.getElementById("result").innerHTML =
+            "✨ Magic Activated! ✨";
+        } else {
+          document.getElementById("result").innerHTML = "Nothing happened...";
+        }
+      }
+    </script>
+  </body>
+</html>
